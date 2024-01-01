@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Arithmetic Game</title>
+</head>
+<body>
+    <div class="question-container">
+        <div class="round">Score: <span id="score">0</span> </div>
+        <div class="question-text" id="question">
+            10 + 10 = ? 
+        </div>
+        <div class="question-answers">
+            <div class="row-1">
+                <button id="Button1" class="answer-button" onclick="checkAnswer(Button1);">Answer 1</button>
+                <button id="Button2" class="answer-button" onclick="checkAnswer(Button2);">Answer 2</button>
+            </div>
+            <div class="row-2">
+                <button id="Button3" class="answer-button " onclick="checkAnswer(Button3);">Answer 3</button>
+                <button id="Button4" class="answer-button" onclick="checkAnswer(Button4);">Answer 4</button>
+            </div>
+        </div>
+
+        <div class="time">Time Left: <span id="time-left">10</span> seconds</div>
+        <div id="timerbar"> <span id="timerbar-amount"></span></div>
+    </div>
+
+    <dialog id="modal">
+        <div class="modal-container">
+            <div class="your-score">
+                <h1>Game Over</h1>
+                <h3>Score: <span id="finalScore"></span></h3>
+            </div>
+            <div class="localStorage" id="localStorage">
+                <h1 id="metrics">Metrics</h1>
+                <div class="information">
+                    <h3>Name: <span id="name">None</span></h3>
+                    <h3>High Score: <span id="highScore"></span></h3>
+                    <h3>Button Most Clicked: <span id="mostcickedBTN">b1</span></h3>
+                    <h3>Clicks: <span id="clicks">0</span></h3>
+                </div>
+            </div>
+ 
+            
+            <div class="modal-buttons">
+                <button type="button" class="playAgainBtn" id = "restartBtn" value="Play Again">Play Again</button>
+
+                <button type="button" class="playAgainBtn" id = "homeBtn" value="Home" o> <a href="start.html">Back to Start</a> </button>
+
+            </div>
+            
+        </div>
+    </dialog>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
